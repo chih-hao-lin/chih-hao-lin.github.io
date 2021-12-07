@@ -1,2 +1,1 @@
-# j1a0m0e4sNTU.github.io
-Personal website
+# Zhi-Hao Lin's personal website
