@@ -1,1 +1,321 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zhi Hao Lin</title>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet" type="text/css" >
+    <link rel="icon" href="images/green-tea.png" title="plant icons">
+    <!-- Custom Styles -->
+    <style>
+          body {
+            font-family: Roboto, 'sans-serif';
+            font-size: 16px;
+            background-color: #FFFFFF;
+            color: #4F6071;
+          }
+          h1 {
+              font-weight: 300;
+              font-size: 2rem;
+              color:#5e2702;
+          }
+          #header {
+            background-color: #fcffdb;
+            display: flex;
+            align-items: flex-end;
+            padding-top:60px;
+            padding-bottom:60px;
+          }
+          #footer {
+            background-color: #FFFFFF;
+            padding:60px;
+          }
+          #portrait {
+            border: 0px solid white;
+          }
+          #header-text {
+            margin-top: 60px;
+            margin-left: 220px;
+          }
+          #header-text-name {
+            font-size: 40px;
+          }
+          #header-text-email {
+            font-size: 20px;
+            font-style: italic;
+          }
+          .header-text-desc {
+            font-size: 20px;
+          }
+          .vspace-top {
+            margin-top: 30px;
+          }
+          .vspace-top-news {
+              margin-top: 15px;
+          }
+          .paper-image {
+            width: 150px;
+          }
+          .news-date {
+              font-weight: bold;
+          }
+          .paper-title {
+            margin-top: 10px;
+            font-weight: bold;
+          }
+          .paper-authors {
+            font-style: italic;
+          }
+          .chinese {
+              font-family: 標楷體;
+          }
+    </style>
+</head>
+
+<body>
+    <div id='header'>
+        <div class='container'>
+            <div class='row'>
+                <div class="col-sm-3 offset-sm-1">
+                    <img src='images/zhi-hao-1.png' class='img-fluid' id='portrait'>
+                </div>
+
+                <div class="col">
+                  <div id='header-text-name'>
+                      Zhi-Hao Lin 
+                  </div>
+                  <div id='header-text-email'>
+                    j1a0m0e4s@gmail.com
+                  </div>
+
+                  <div class="row" style="margin-top: 20px;">
+                    <div class="text-center">
+                        <ul class="nav nav-pills nav-justified">
+                            <li style="margin: 10px;">
+                                <a href="https://github.com/zhihao-lin">
+                                <image src="images/icon-github.png" height="50px">
+                                <br>[GitHub]
+                                </a>
+                            </li>
+                            <li style="margin: 10px;">
+                                <a href="https://scholar.google.com/citations?user=QdqDnA0AAAAJ">
+                                <image src="images/icon-scholar.png" height="50px">
+                                <br>[Scholar]
+                                </a>
+                            </li>
+                            <li style="margin: 10px;">
+                                <a href="https://twitter.com/ZhiHaoLin16">
+                                <image src="images/icon-twitter.png" height="50px">
+                                <br>[Twitter]
+                                </a>
+                            </li>
+                            <li style="margin: 10px;">
+                                <a href="docs/cv_zhihao.pdf">
+                                <image src="images/icon-cv.png" height="50px">
+                                <br>[CV]
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class='container'>
+        <div class='row vspace-top'>
+            <div class='col offset-sm-1'>
+                <h1>Bio</h1>
+                <p>
+                    My name is Zhi-Hao Lin (<span class="chinese">林志皓</span>). I am an incoming Ph.D. student in 
+                    Computer Science at <a href="https://cs.illinois.edu/">University of Illinois Urbana-Champaign</a>, and my advisor is prof. <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a>. 
+                    Previously, I obtained my Bachelor's and Master's degree in Electrical Engineering from <a href="https://www.ntu.edu.tw/english/">National Taiwan University</a>, 
+                    and was fortunate to be advised by prof. <a href="http://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a>.
+                    My research interest lies in 3D computer vision, deep learning, and neural rendering. 
+                    My goal is to enable machine to perceive and reconstruct the 3D world accurately and efficiently.
+                </p>
+                
+                <!-- News -->
+                <div class='vspace-top'>
+                    <h1>News</h1>
+                </div>
+
+                <div class='row vspace-top-news'>
+                    <div class="col-sm-2 news-date">
+                        March 2022
+                    </div>
+                    <div class="col">
+                        Our paper "NeuMips: Neural Mixture of Planar Experts
+                        for View Synthesis" is accepted to CVPR 2022!
+                    </div>
+                </div>
+                <div class='row vspace-top-news'>
+                    <div class="col-sm-2 news-date">
+                        April 2021
+                    </div>
+                    <div class="col">
+                        Obtained Master's degree from Graduate Institute of Communication Engineering 
+                        (<a href="https://comm.ntu.edu.tw/en/">GICE</a>), National Taiwan Universiy. 
+                    </div>
+                </div>
+
+
+                <!-- Publications -->
+                <div class='vspace-top'>
+                    <h1>Publications</h1>
+                </div>
+                
+                <div class='row vspace-top' onmouseout="neurmips_stop()" onmouseover="neurmips_start()">
+                    <div class="one col-sm-3">
+                        <div class="two" id="2022_neurmips">
+                            <img class="project_image" src="images/2022_neurmips_after.png">
+                        </div>
+                        <img class="project_image" src="images/2022_neurmips_before.png">
+                    </div>
+                    <script type="text/javascript">
+                        function neurmips_start() {
+                          document.getElementById('2022_neurmips').style.opacity = "1";
+                        }
+                    
+                        function neurmips_stop() {
+                          document.getElementById('2022_neurmips').style.opacity = "0";
+                        }
+                        neurmips_stop()
+                    </script>
+
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            NeuMips: Neural Mixture of Planar Experts for View Synthesis
+                        </div>
+                        <div class='paper-desc'>
+                            CVPR 2022
+                        </div>
+                        <div class='paper-authors'>
+                            <strong>Zhi-Hao Lin</strong>, 
+                            <a href="https://people.csail.mit.edu/weichium/">Wei-Chiu Ma</a>, 
+                            Hao-Yu Hsu, 
+                            <a href="http://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a>, 
+                            <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a> 
+                        </div>
+                        <div>
+                            <a href="https://zhihao-lin.github.io/neurmips/">[Project page]</a>
+                            <a href="">[Paper]</a>
+                            <a href="https://github.com/zhihao-lin/neurmips">[Code]</a>
+                            <a href="https://youtu.be/PV1dCTWL5Oo">[Video]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row vspace-top' onmouseout="gcn3d_tpami_stop()" onmouseover="gcn3d_tpami_start()">
+                    <div class="one col-sm-3">
+                        <div class="two" id="gcn3d_tpami">
+                            <img class="project_image" src="images/2021_gcn3d_after.png">
+                        </div>
+                        <img class="project_image"  src="images/2021_gcn3d_before.png">
+                    </div>
+                    <script type="text/javascript">
+                        function gcn3d_tpami_start() {
+                          document.getElementById('gcn3d_tpami').style.opacity = "1";
+                        }
+                    
+                        function gcn3d_tpami_stop() {
+                          document.getElementById('gcn3d_tpami').style.opacity = "0";
+                        }
+                        gcn3d_tpami_stop()
+                    </script>
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            Learning of 3D Graph Convolution Networks for Point Cloud Analysis
+                        </div>
+                        <div class='paper-desc'>
+                            TPAMI 2021
+                        </div>
+                        <div class='paper-authors'>
+                            <strong>Zhi-Hao Lin</strong>, 
+                            Sheng-Yu Huang, 
+                            <a href="http://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a>
+                        </div>
+                        <div>
+                            <a href="https://drive.google.com/file/d/1AY4wwVtj15WCRlpcH74fi4WkUdMAMCEZ/view?usp=sharing">[Paper]</a>
+                            <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9355025">[IEEE]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row vspace-top' onmouseout="gcn3d_cvpr_stop()" onmouseover="gcn3d_cvpr_start()">
+                    <div class="one col-sm-3">
+                        <div class="two" id="gcn3d_cvpr">
+                            <img class="project_image" src="images/2020_gcn3d_after.png">
+                        </div>
+                        <img class="project_image" src="images/2020_gcn3d_before.png">
+                    </div>
+                    <script type="text/javascript">
+                        function gcn3d_cvpr_start() {
+                          document.getElementById('gcn3d_cvpr').style.opacity = "1";
+                        }
+                    
+                        function gcn3d_cvpr_stop() {
+                          document.getElementById('gcn3d_cvpr').style.opacity = "0";
+                        }
+                        gcn3d_cvpr_stop()
+                    </script>
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            Convolution in the Cloud: Learning Deformable Kernels <br>in 3D Graph Convolution Networks for Point Cloud Analysis
+                        </div>
+                        <div class='paper-desc'>
+                            CVPR 2020
+                        </div>
+                        <div class='paper-authors'>
+                            <strong>Zhi-Hao Lin</strong>, 
+                            Sheng-Yu Huang, 
+                            <a href="http://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a>
+                        </div>
+                        <div>
+                            <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Lin_Convolution_in_the_Cloud_Learning_Deformable_Kernels_in_3D_Graph_CVPR_2020_paper.pdf">[Paper]</a>
+                            <a href="https://openaccess.thecvf.com/content_CVPR_2020/supplemental/Lin_Convolution_in_the_CVPR_2020_supplemental.pdf">[Supp.]</a>
+                            <a href="https://github.com/zhihao-lin/3dgcn">[Code]</a>
+                            <a href="https://www.youtube.com/watch?v=xfftSRFlWY0">[Video]</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class='vspace-top' style="font-size: 15px;">
+                    <h4>Acknowledgement</h4>
+                    <p>The website template was borrowed from <a href="https://github.com/vsitzmann/vsitzmann.github.io">Vincent Sitzmann</a> and <a href="https://github.com/jonbarron/website">Jon Barron</a>. </p>
+                    <p><a target="_blank" href="https://icons8.com/icon/106567/github">GitHub</a>, 
+                        <a target="_blank" href="https://icons8.com/icon/pU44R9xgF3wq/google-scholar">Google Scholar</a>, 
+                        <a target="_blank" href="https://icons8.com/icon/60452/twitter-circled">Twitter Circled</a>, 
+                        <a target="_blank" href="https://icons8.com/icon/98928/cv">CV</a> 
+                        icon by <a target="_blank" href="https://icons8.com">Icons8</a>.
+                        Plant icons created by <a href="https://www.flaticon.com/free-icons/plant" title="plant icons">dDara - Flaticon</a>
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id='footer' class='vspace-top'>
+    <div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
