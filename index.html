@@ -136,50 +136,107 @@
             <div class='col offset-sm-1'>
                 <h1>Bio</h1>
                 <p>
-                    My name is Zhi-Hao Lin (<span class="chinese">林志皓</span>). I am a first year Ph.D. student in 
-                    Computer Science at <a href="https://cs.illinois.edu/">University of Illinois at Urbana-Champaign</a>, and my advisor is prof. <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a>. 
-                    Previously, I obtained my Bachelor's and Master's degree in Electrical Engineering from <a href="https://www.ntu.edu.tw/english/">National Taiwan University</a>, 
+                    My name is Zhi-Hao Lin (<span class="chinese">林志皓</span>). I am a second year Ph.D. student in 
+                    Computer Science at UIUC, advised by prof. <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a>. 
+                    Previously, I obtained my Bachelor's and Master's degree from National Taiwan University, 
                     and was fortunate to be advised by prof. <a href="http://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a>.
-                    My research interest lies in 3D computer vision, deep learning, and neural rendering. 
-                    My goal is to enable machines to perceive and reconstruct the 3D world accurately and efficiently.
+                    My research interest lies in 3D vision and neural rendering, and the long-term goal is to enable machines to perceive and reconstruct the 3D world accurately and efficiently.
                 </p>
                 
                 <!-- News -->
                 <div class='vspace-top'>
                     <h1>News</h1>
                 </div>
-
                 <div class='row vspace-top-news'>
                     <div class="col-sm-2 news-date">
-                        March 2022
+                        Sep. 2023
+                    </div>
+                    <div class="col">
+                        Our paper "Sim-on-Wheels: Physical World in the Loop Simulation for Autonomous Driving" is accepted to RA-L 2023
+                    </div>
+                </div>
+                <div class='row vspace-top-news'>
+                    <div class="col-sm-2 news-date">
+                        Jul. 2023
+                    </div>
+                    <div class="col">
+                        Our paper "ClimateNeRF: Extreme Weather Synthesis in Neural Radiance Field" is accepted to ICCV 2023
+                    </div>
+                </div>
+                <div class='row vspace-top-news'>
+                    <div class="col-sm-2 news-date">
+                        Aug. 2022
+                    </div>
+                    <div class="col">
+                        Start the PhD journey at UIUC
+                    </div>
+                </div>
+                <div class='row vspace-top-news'>
+                    <div class="col-sm-2 news-date">
+                        Mar. 2022
                     </div>
                     <div class="col">
                         Our paper "NeuMips: Neural Mixture of Planar Experts
-                        for View Synthesis" is accepted to CVPR 2022!
+                        for View Synthesis" is accepted to CVPR 2022
                     </div>
                 </div>
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        April 2021
-                    </div>
-                    <div class="col">
-                        Obtained Master's degree from Graduate Institute of Communication Engineering 
-                        (<a href="https://comm.ntu.edu.tw/en/">GICE</a>), National Taiwan Universiy. 
-                    </div>
-                </div>
-
 
                 <!-- Publications -->
                 <div class='vspace-top'>
                     <h1>Publications</h1>
                 </div>
                 
+                <div class='row vspace-top' onmouseout="climatenerf_stop()" onmouseover="climatenerf_start()">
+                    <div class="one">
+                        <div class="two" id="2023_climatenerf">
+                            <div class="project_media"><video playsinline="" autoplay="" loop="" muted="">
+                            <source src="images/2023_climatenerf_after.mp4" type="video/mp4"></video></div>
+                        </div>
+                        <div class="project_media"><img src="images/2023_climatenerf_before.png"></div>
+                    </div>
+                    <script type="text/javascript">
+                        function climatenerf_start() {
+                          document.getElementById('2023_climatenerf').style.opacity = "1";
+                        }
+                    
+                        function climatenerf_stop() {
+                          document.getElementById('2023_climatenerf').style.opacity = "0";
+                        }
+                        climatenerf_stop()
+                    </script>
+
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            ClimateNeRF: Extreme Weather Synthesis in Neural Radiance Field
+                        </div>
+                        <div class='paper-desc'>
+                            ICCV 2023
+                        </div>
+                        <div class='paper-authors'>
+                            <a href="https://y-u-a-n-l-i.github.io/">Yuan Li\(^*\)</a>,
+                            <strong>Zhi-Hao Lin\(^*\)</strong>, 
+                            <a href="http://luthuli.cs.uiuc.edu/~daf/">David Forsyth</a>, 
+                            <a href="https://jbhuang0604.github.io/">Jia-Bin Huang</a>, 
+                            <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a> 
+                        </div>
+                        <div>(\(^*\) Equal Contribution)</div>
+                        <div>
+                            <a href="https://climatenerf.github.io/">[Project page]</a>
+                            <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Li_ClimateNeRF_Extreme_Weather_Synthesis_in_Neural_Radiance_Field_ICCV_2023_paper.pdf">[Paper]</a>
+                            <a href="https://openaccess.thecvf.com/content/ICCV2023/supplemental/Li_ClimateNeRF_Extreme_Weather_ICCV_2023_supplemental.pdf">[Supp]</a>
+                            <a href="https://arxiv.org/pdf/2211.13226">[arXiv]</a>
+                            <a href="https://github.com/y-u-a-n-l-i/Climate_NeRF">[Code]</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class='row vspace-top' onmouseout="neurmips_stop()" onmouseover="neurmips_start()">
                     <div class="one">
                         <div class="two" id="2022_neurmips">
-                            <img class="project_image" src="images/2022_neurmips_after.png">
+                            <div class="project_media"><img src="images/2022_neurmips_after.png"></div> 
                         </div>
-                        <img class="project_image" src="images/2022_neurmips_before.png">
+                        <div class="project_media"><img src="images/2022_neurmips_before.png"></div>
                     </div>
                     <script type="text/javascript">
                         function neurmips_start() {
@@ -207,7 +264,7 @@
                             <a href="http://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a>, 
                             <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a> 
                         </div>
-                        <div>(\(^*\) Equal Contribution)</div>
+                        <!-- <div>(\(^*\) Equal Contribution)</div> -->
                         <div>
                             <a href="https://zhihao-lin.github.io/neurmips/">[Project page]</a>
                             <a href="https://arxiv.org/abs/2204.13696">[Paper]</a>
@@ -220,9 +277,9 @@
                 <div class='row vspace-top' onmouseout="gcn3d_tpami_stop()" onmouseover="gcn3d_tpami_start()">
                     <div class="one">
                         <div class="two" id="gcn3d_tpami">
-                            <img class="project_image" src="images/2021_gcn3d_after.png">
+                            <div class="project_media"><img src="images/2021_gcn3d_after.png"></div>
                         </div>
-                        <img class="project_image"  src="images/2021_gcn3d_before.png">
+                        <div class="project_media"><img src="images/2021_gcn3d_before.png"></div>
                     </div>
                     <script type="text/javascript">
                         function gcn3d_tpami_start() {
@@ -257,9 +314,9 @@
                 <div class='row vspace-top' onmouseout="gcn3d_cvpr_stop()" onmouseover="gcn3d_cvpr_start()">
                     <div class="one">
                         <div class="two" id="gcn3d_cvpr">
-                            <img class="project_image" src="images/2020_gcn3d_after.png">
+                            <div class="project_media"><img src="images/2020_gcn3d_after.png"></div>
                         </div>
-                        <img class="project_image" src="images/2020_gcn3d_before.png">
+                        <div class="project_media"><img src="images/2020_gcn3d_before.png"></div>
                     </div>
                     <script type="text/javascript">
                         function gcn3d_cvpr_start() {
