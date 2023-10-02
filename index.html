@@ -186,6 +186,50 @@
                     <h1>Publications</h1>
                 </div>
                 
+                <div class='row vspace-top' onmouseout="urbanir_stop()" onmouseover="urbanir_start()">
+                    <div class="one">
+                        <div class="two" id="2023_urbanir">
+                            <div class="project_media"><video playsinline="" autoplay="" loop="" muted="">
+                            <source src="images/2023_urbanir_after.mp4" type="video/mp4"></video></div>
+                        </div>
+                        <div class="project_media"><img src="images/2023_urbanir_before.png"></div>
+                    </div>
+                    <script type="text/javascript">
+                        function urbanir_start() {
+                          document.getElementById('2023_urbanir').style.opacity = "1";
+                        }
+                    
+                        function urbanir_stop() {
+                          document.getElementById('2023_urbanir').style.opacity = "0";
+                        }
+                        urbanir_stop()
+                    </script>
+
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            UrbanIR: Large-Scale Urban Scene Inverse Rendering from a Single Video
+                        </div>
+                        <div class='paper-desc'>
+                            arXiv preprint 2023
+                        </div>
+                        <div class='paper-authors'>
+                            <strong>Zhi-Hao Lin</strong>, 
+                            <a href="https://www.linkedin.com/in/bohanliu524/?locale=en_US">Bohan Liu</a>,
+                            <a href="https://jamie725.github.io/website/">Yi-Ting Chen</a>,
+                            <a href="http://luthuli.cs.uiuc.edu/~daf/">David Forsyth</a>, 
+                            <a href="https://jbhuang0604.github.io/">Jia-Bin Huang</a>, 
+                            <a href="https://anandbhattad.github.io/">Anand Bhattad</a>,
+                            <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a> 
+                        </div>
+                        <!-- <div>(\(^*\) Equal Contribution)</div> -->
+                        <div>
+                            <a href="https://urbaninverserendering.github.io/">[Project page]</a>
+                            <a href="https://arxiv.org/abs/2306.09349">[Paper]</a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class='row vspace-top' onmouseout="climatenerf_stop()" onmouseover="climatenerf_start()">
                     <div class="one">
                         <div class="two" id="2023_climatenerf">
