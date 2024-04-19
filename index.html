@@ -136,10 +136,10 @@
             <div class='col offset-sm-1'>
                 <h1>Bio</h1>
                 <p>
-                    My name is Zhi-Hao Lin (<span class="chinese">林志皓</span>). I am a second year Ph.D. student in 
-                    Computer Science at UIUC, advised by prof. <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a>. 
-                    Previously, I obtained my Bachelor's and Master's degree from National Taiwan University, 
-                    and was fortunate to be advised by prof. <a href="http://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a>.
+                    Hi! I'm Zhi-Hao Lin (<span class="chinese">林志皓</span>), a second year Ph.D. student in 
+                    Computer Science at UIUC, advised by <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a>. 
+                    I am fortunate to work closely with <a href="http://luthuli.cs.uiuc.edu/~daf/">David Forsyth</a>, <a href="https://jbhuang0604.github.io/">Jia-Bin Huang</a>, and <a href="https://people.csail.mit.edu/weichium/">Wei-Chiu Ma</a>.
+                    Previously, I obtained my Bachelor's and Master's degree from National Taiwan University, advised by <a href="http://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a>.
                     My research interest lies in 3D vision and neural rendering, and the long-term goal is to enable machines to perceive and reconstruct the 3D world accurately and efficiently.
                 </p>
                 
@@ -147,12 +147,21 @@
                 <div class='vspace-top'>
                     <h1>News</h1>
                 </div>
+
+                <div class='row vspace-top-news'>
+                    <div class="col-sm-2 news-date">
+                        Feb. 2024
+                    </div>
+                    <div class="col">
+                        Our paper "Video2Game" is accepted to CVPR 2024
+                    </div>
+                </div>
                 <div class='row vspace-top-news'>
                     <div class="col-sm-2 news-date">
                         Sep. 2023
                     </div>
                     <div class="col">
-                        Our paper "Sim-on-Wheels: Physical World in the Loop Simulation for Autonomous Driving" is accepted to RA-L 2023
+                        Our paper "Sim-on-Wheels" is accepted to RA-L 2023
                     </div>
                 </div>
                 <div class='row vspace-top-news'>
@@ -160,7 +169,7 @@
                         Jul. 2023
                     </div>
                     <div class="col">
-                        Our paper "ClimateNeRF: Extreme Weather Synthesis in Neural Radiance Field" is accepted to ICCV 2023
+                        Our paper "ClimateNeRF" is accepted to ICCV 2023
                     </div>
                 </div>
                 <div class='row vspace-top-news'>
@@ -171,21 +180,105 @@
                         Start the PhD journey at UIUC
                     </div>
                 </div>
-                <div class='row vspace-top-news'>
-                    <div class="col-sm-2 news-date">
-                        Mar. 2022
-                    </div>
-                    <div class="col">
-                        Our paper "NeuMips: Neural Mixture of Planar Experts
-                        for View Synthesis" is accepted to CVPR 2022
-                    </div>
-                </div>
 
                 <!-- Publications -->
                 <div class='vspace-top'>
                     <h1>Publications</h1>
                 </div>
                 
+                <!-- Video2Game -->
+                <div class='row vspace-top' onmouseout="video2game_stop()" onmouseover="video2game_start()">
+                    <div class="one">
+                        <div class="two" id="2024_video2game">
+                            <div class="project_media"><video playsinline="" autoplay="" loop="" muted="">
+                            <source src="images/2024_video2game_after.mp4" type="video/mp4"></video></div>
+                        </div>
+                        <div class="project_media"><img src="images/2024_video2game_before.png"></div>
+                    </div>
+                    <script type="text/javascript">
+                        function video2game_start() {
+                          document.getElementById('2024_video2game').style.opacity = "1";
+                        }
+                    
+                        function video2game_stop() {
+                          document.getElementById('2024_video2game').style.opacity = "0";
+                        }
+                        video2game_stop()
+                    </script>
+
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            Video2Game: Real-time, Interactive, Realistic and Browser-Compatible Environment from a Single Video
+                        </div>
+                        <div class='paper-desc'>
+                            CVPR 2024
+                        </div>
+                        <div class='paper-authors'>
+                            <a href="https://xiahongchi.github.io/">Hongchi Xia</a>,
+                            <strong>Zhi-Hao Lin</strong>, 
+                            <a href="https://people.csail.mit.edu/weichium/">Wei-Chiu Ma</a>,
+                            <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a> 
+                        </div>
+                        <!-- <div>(\(^*\) Equal Contribution)</div> -->
+                        <div>
+                            <a href="https://video2game.github.io/">[Project page]</a>
+                            <a href="https://arxiv.org/abs/2404.09833">[Paper]</a>
+                            <a href="https://github.com/video2game/video2game">[Code]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IRIS -->
+                <div class='row vspace-top' onmouseout="iris_stop()" onmouseover="iris_start()">
+                    <div class="one">
+                        <div class="two" id="2024_iris">
+                            <div class="project_media"><video playsinline="" autoplay="" loop="" muted="">
+                            <source src="images/2024_iris_after.mp4" type="video/mp4"></video></div>
+                        </div>
+                        <div class="project_media"><img src="images/2024_iris_before.png"></div>
+                    </div>
+                    <script type="text/javascript">
+                        function iris_start() {
+                          document.getElementById('2024_iris').style.opacity = "1";
+                        }
+                    
+                        function iris_stop() {
+                          document.getElementById('2024_iris').style.opacity = "0";
+                        }
+                        iris_stop()
+                    </script>
+
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            IRIS: Inverse Rendering of Indoor Scenes from Low Dynamic Range Images
+                        </div>
+                        <div class='paper-desc'>
+                            arXiv preprint 2024
+                        </div>
+                        <div class='paper-authors'>
+                            <strong>Zhi-Hao Lin</strong>, 
+                            <a href="https://jbhuang0604.github.io/">Jia-Bin Huang</a>, 
+                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=Nxc2RbQAAAAJ&view_op=list_works&sortby=pubdate">Zhengqin Li</a>, 
+                            <a href="http://flycooler.com/">Zhao Dong</a>, 
+                            <a href="https://richardt.name/">Christian Richardt</a>, 
+                            <br>
+                            <a href="https://scholar.google.com/citations?user=jGQeuBUAAAAJ">Tuotuo Li</a>, 
+                            <a href="https://zollhoefer.com/">Michael Zollhöfer</a>, 
+                            <a href="https://johanneskopf.de/">Johannes Kopf</a>, 
+                            <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a> 
+                            <a href="https://changilkim.com/">Changil Kim</a>, 
+                        </div>
+                        <!-- <div>(\(^*\) Equal Contribution)</div> -->
+                        <div>
+                            <a href="https://irisldr.github.io/">[Project page]</a>
+                            <a href="https://arxiv.org/abs/2401.12977">[Paper]</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UrbanIR -->
                 <div class='row vspace-top' onmouseout="urbanir_stop()" onmouseover="urbanir_start()">
                     <div class="one">
                         <div class="two" id="2023_urbanir">
