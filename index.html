@@ -212,6 +212,54 @@
                 <div class='vspace-top'>
                     <h1>Publications</h1>
                 </div>
+                
+                <!-- WeatherWeaver -->
+                <div class='row vspace-top' onmouseout="WeatherWeaver_stop()" onmouseover="WeatherWeaver_start()">
+                    <div class="one">
+                        <div class="two" id="2025_WeatherWeaver">
+                            <div class="project_media"><video playsinline="" autoplay="" loop="" muted="">
+                            <source src="images/2025/WeatherWeaver/after.mp4" type="video/mp4"></video></div>
+                        </div>
+                        <div class="project_media"><img src="images/2025/WeatherWeaver/before.png"></div>
+                    </div>
+                    <script type="text/javascript">
+                        function WeatherWeaver_start() {
+                          document.getElementById('2025_WeatherWeaver').style.opacity = "1";
+                        }
+                    
+                        function WeatherWeaver_stop() {
+                          document.getElementById('2025_WeatherWeaver').style.opacity = "0";
+                        }
+                        WeatherWeaver_start()
+                    </script>
+
+
+                    <div class="col">
+                        <div class='paper-title'>
+                            Controllable Weather Simulation and Removal with Video Diffusion Models
+                        </div>
+                        <div class='paper-desc'>
+                            arXiv 2025
+                        </div>
+                        <div class='paper-authors'>
+                            <strong>Chih-Hao Lin</strong>, 
+                            <a href="https://www.cs.toronto.edu/~zianwang/">Zian Wang</a>,
+                            <a href="https://nexuslrf.github.io/">Ruofan Liang</a>, 
+                            <a href="https://scholar.google.com/citations?user=Jt5VvNgAAAAJ&hl=en">Yuxuan Zhang</a>, 
+                            <br>
+                            <a href="https://www.cs.toronto.edu/~fidler/">Sanja Fidler</a>, 
+                            <a href="https://shenlong.web.illinois.edu/">Shenlong Wang</a>,
+                            <a href="https://zgojcic.github.io/">Zan Gojcic</a>
+                            
+                        </div>
+                        <!-- <div>(\(^*\) Equal Contribution)</div> -->
+                        <div>
+                            <a href="https://research.nvidia.com/labs/toronto-ai/WeatherWeaver/">[Project page]</a>
+                            <a href="https://arxiv.org/abs/2505.00704">[Paper]</a>
+                            <a href="https://www.youtube.com/watch?v=TSl_URiqc7M">[Video]</a>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- IRIS -->
                 <div class='row vspace-top' onmouseout="iris_stop()" onmouseover="iris_start()">
