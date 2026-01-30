@@ -1,1 +1,1 @@
-# Zhi-Hao Lin's personal website
+# Chih-Hao Lin's personal website
