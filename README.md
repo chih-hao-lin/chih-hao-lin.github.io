@@ -88,50 +88,17 @@ npm --version
 
 ## Deploying onto GitHub Pages
 
-### Prerequisites
+1. Fork or clone this repo and push to your own repository at `[your-github-username].github.io`.
 
-1. Ensure your repository is named `[your-github-username].github.io` (e.g., `chih-hao-lin.github.io`)
-2. Make sure you have pushed all your code to the `main` branch
+2. In your repository settings, ensure the repository name matches `[your-github-username].github.io` if you want it to be your main GitHub Pages site.
 
-### Setup Steps
+3. Push your changes to the main branch.
 
-1. **Enable GitHub Pages in Repository Settings:**
-   - Go to your repository on GitHub
-   - Navigate to `Settings` → `Pages`
-   - Under "Source", select `GitHub Actions`
-   - Save the settings
+4. Go to the GitHub page for your repository and go to `Settings` then `Pages`. If you set Source to be `GitHub Actions`, it should suggest you a build script for Next.js.
 
-2. **Push the workflow file:**
-   - The GitHub Actions workflow file (`.github/workflows/deploy.yml`) is already included in this repository
-   - If you haven't committed it yet, commit and push it:
-     ```bash
-     git add .github/workflows/deploy.yml
-     git commit -m "Add GitHub Pages deployment workflow"
-     git push origin main
-     ```
+5. Commit the build script and see things building.
 
-3. **Monitor the deployment:**
-   - Go to the `Actions` tab in your GitHub repository
-   - You should see a workflow run called "Deploy to GitHub Pages"
-   - Wait for it to complete (usually takes 2-3 minutes)
-   - Once it's successful, your site will be live!
-
-4. **Access your site:**
-   - Your site will be available at `https://[your-github-username].github.io/`
-   - For example: `https://chih-hao-lin.github.io/`
-
-### Automatic Deployment
-
-After the initial setup, every time you push changes to the `main` branch, GitHub Actions will automatically:
-- Build your Next.js application
-- Deploy it to GitHub Pages
-- Your site will update within a few minutes
-
-### Troubleshooting
-
-- If the deployment fails, check the `Actions` tab for error messages
-- Make sure `next.config.ts` has `output: "export"` configured (already done)
-- Ensure all dependencies are properly installed and the build completes locally with `npm run build`
+Your site should now be live at `https://[your-github-username].github.io/`.
 
 ## Deploying to your own domain
 
