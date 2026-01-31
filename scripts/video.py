@@ -213,10 +213,159 @@ def loop():
                     fps=args.fps, macro_block_size=1)
 
 
+def create_autovfx_video():
+    """
+    Create a video from images:
+    - First 30 frames: before.png (repeated)
+    - Then: all images from assets/fire_ball/ directory
+    """
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--before', default='images/2025/autovfx/before.png', help='path to before.png')
+    parser.add_argument('--fire_ball_dir', default='images/2025/autovfx/assets/fire_ball', help='path to fire_ball directory')
+    parser.add_argument('--out', default='images/2025/autovfx/teaser.mp4', help='output video path')
+    parser.add_argument('--fps', type=int, default=30)
+    parser.add_argument('--repeat_before', type=int, default=60, help='number of times to repeat before.png')
+    args = parser.parse_args()
+
+    # Load before.png and convert to RGB if needed
+    before_pil = Image.open(args.before)
+    if before_pil.mode != 'RGB':
+        before_pil = before_pil.convert('RGB')
+    
+    h, w = np.array(before_pil).shape[:2]
+    h, w = h // 4, w // 4
+    h = h - h % 2
+    w = w - w % 2
+    print("h, w:", h, w)
+    before_img = before_pil.resize((w, h))
+    before_img = np.array(before_img)
+    
+    # Create list with 30 copies of before.png
+    imgs = [before_img for _ in range(args.repeat_before)]
+    
+    # Get all images from fire_ball directory
+    fire_ball_imgs = sorted([os.path.join(args.fire_ball_dir, img) 
+                            for img in os.listdir(args.fire_ball_dir) 
+                            if is_image_name(img)])
+    
+    # Append fire_ball images, resizing to match before.png dimensions and format
+    for img_path in fire_ball_imgs:
+        img = Image.open(img_path)
+        # Convert to RGB if needed
+        if img.mode != 'RGB':
+            img = img.convert('RGB')
+        # Use LANCZOS resampling (or Image.LANCZOS for older PIL versions)
+        try:
+            img = img.resize((w, h), Image.Resampling.LANCZOS)
+        except AttributeError:
+            img = img.resize((w, h), Image.LANCZOS)
+        img = np.array(img)
+        imgs.append(img)
+    
+    # Export video
+    imageio.mimsave(args.out, imgs, fps=args.fps, macro_block_size=1)
+    print(f'Video exported: {args.out}')
+    print(f'Total frames: {len(imgs)} ({args.repeat_before} before + {len(fire_ball_imgs)} fire_ball)')
+
+def create_transition_video():
+    """
+    Create a video with linear interpolation:
+    - First 30 frames: before.png (repeated)
+    - Next 30 frames: linear interpolation from before.png to after.png
+    - Next 30 frames: after.png (repeated)
+    - Next 30 frames: linear interpolation from after.png to before.png
+    """
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--before', default='images/2021/gcn3d_pami/before.png', help='path to before.png')
+    parser.add_argument('--after', default='images/2021/gcn3d_pami/after.png', help='path to after.png')
+    parser.add_argument('--out', default='images/2021/gcn3d_pami/teaser.mp4', help='output video path')
+    parser.add_argument('--fps', type=int, default=30)
+    parser.add_argument('--frames_per_section', type=int, default=30, help='number of frames per section')
+    args = parser.parse_args()
+
+    # Load before.png and convert to RGB if needed
+    before_pil = Image.open(args.before)
+    if before_pil.mode != 'RGB':
+        before_pil = before_pil.convert('RGB')
+
+    # Resize before_pil if width > 800 pixels
+    before_width, before_height = before_pil.size
+    if before_width > 800:
+        new_height = int(before_height * (800 / before_width))
+        try:
+            before_pil = before_pil.resize((800, new_height), Image.Resampling.LANCZOS)
+        except AttributeError:
+            before_pil = before_pil.resize((800, new_height), Image.LANCZOS)
+
+    before_img = np.array(before_pil).astype(np.float32)
+
+    # Load after.png and convert to RGB if needed
+    after_pil = Image.open(args.after)
+    if after_pil.mode != 'RGB':
+        after_pil = after_pil.convert('RGB')
+
+    # Resize after_pil such that width cannot exceed 800 pixels
+    after_width, after_height = after_pil.size
+    if after_width > 800:
+        new_height = int(after_height * (800 / after_width))
+        try:
+            after_pil = after_pil.resize((800, new_height), Image.Resampling.LANCZOS)
+        except AttributeError:
+            after_pil = after_pil.resize((800, new_height), Image.LANCZOS)
+
+    # Ensure same dimensions (resize after_pil to match before_pil)
+    if before_pil.size != after_pil.size:
+        try:
+            after_pil = after_pil.resize(before_pil.size, Image.Resampling.LANCZOS)
+        except AttributeError:
+            after_pil = after_pil.resize(before_pil.size, Image.LANCZOS)
+    after_img = np.array(after_pil).astype(np.float32)
+    # Ensure dimensions are even (required for video encoding)
+    h, w = before_img.shape[:2]
+    h = h - h % 2
+    w = w - w % 2
+    before_img = before_img[:h, :w]
+    after_img = after_img[:h, :w]
+    
+    # Convert to uint8 for final output
+    before_img_uint8 = before_img.astype(np.uint8)
+    after_img_uint8 = after_img.astype(np.uint8)
+    
+    imgs = []
+    
+    # Section 1: 30 frames of before.png
+    for _ in range(args.frames_per_section * 2):
+        imgs.append(before_img_uint8.copy())
+    
+    # Section 2: 30 frames linear interpolation from before to after
+    # alpha goes from 0 to 1: result = (1 - alpha) * before + alpha * after
+    for i in range(args.frames_per_section):
+        alpha = i / (args.frames_per_section - 1)  # 0 to 1
+        interpolated = (1 - alpha) * before_img + alpha * after_img
+        imgs.append(interpolated.astype(np.uint8))
+    
+    # Section 3: 30 frames of after.png
+    for _ in range(args.frames_per_section * 2):
+        imgs.append(after_img_uint8.copy())
+    
+    # Section 4: 30 frames linear interpolation from after to before
+    # alpha goes from 0 to 1: result = (1 - alpha) * after + alpha * before
+    for i in range(args.frames_per_section):
+        alpha = i / (args.frames_per_section - 1)  # 0 to 1
+        interpolated = (1 - alpha) * after_img + alpha * before_img
+        imgs.append(interpolated.astype(np.uint8))
+    
+    # Export video
+    imageio.mimsave(args.out, imgs, fps=args.fps, macro_block_size=1)
+    print(f'Video exported: {args.out}')
+    print(f'Total frames: {len(imgs)} (4 sections of {args.frames_per_section} frames each)')
+
 if __name__ == '__main__':
     # extract_frames()
-    generate_video()
+    # generate_video()
     # merge_video()
     # add_text()
     # switch_video()
     # loop()
+    # create_autovfx_video()
+    create_transition_video()
