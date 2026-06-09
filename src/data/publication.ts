@@ -14,9 +14,30 @@ export interface Publication {
   videoUrl?: string;
   suppUrl?: string;
   oral?: boolean;
+  selected?: boolean;
 }
 
 export const publicationData: Publication[] = [
+  {
+    year: "2026",
+    conference: "CVPR",
+    title: "GenWildSplat: Generalizable Sparse-View 3D Reconstruction from Unconstrained Images",
+    authors: "<a href='https://vinayak-vg.github.io/'>Vinayak Gupta</a>, <strong>Chih-Hao Lin</strong>, <a href='https://shenlong.web.illinois.edu/'>Shenlong Wang</a>, <a href='https://anandbhattad.github.io/'>Anand Bhattad</a>, <a href='https://jbhuang0604.github.io/'>Jia-Bin Huang</a>",
+    projectUrl: "https://genwildsplat.github.io/",
+    paperUrl: "https://arxiv.org/abs/2604.28193",
+    codeUrl: "https://github.com/Vinayak-VG/GenWildSplat",
+    previewVideoUrl: "/images/2026/genwildsplat/teaser.mp4",
+  },
+  {
+    year: "2025",
+    conference: "arXiv",
+    title: "SceneDiff: A Benchmark and Method for Multiview Object Change Detection",
+    authors: "<a href='http://yuqunw.github.io'>Yuqun Wu</a>, <strong>Chih-Hao Lin</strong>, <a href='https://hungdche.github.io'>Henry Che</a>, <a href='https://adititiwari19.github.io'>Aditi Tiwari</a>, <a href='https://zouchuhang.github.io'>Chuhang Zou</a>, <a href='https://shenlong.web.illinois.edu'>Shenlong Wang</a>, <a href='http://dhoiem.cs.illinois.edu'>Derek Hoiem</a>",
+    projectUrl: "https://yuqunw.github.io/SceneDiff/",
+    paperUrl: "https://arxiv.org/abs/2512.16908",
+    codeUrl: "https://github.com/yuqunw/scene_diff",
+    previewVideoUrl: "/images/2026/scenediff/teaser.mp4",
+  },
   {
     year: "2025",
     conference: "NeurIPS",
@@ -31,10 +52,12 @@ export const publicationData: Publication[] = [
     year: "2025",
     conference: "ICCV",
     title: "Controllable Weather Synthesis and Removal with Video Diffusion Models",
+    selected: true,
     authors: "<strong>Chih-Hao Lin</strong>, <a href='https://www.cs.toronto.edu/~zianwang/'>Zian Wang</a>, <a href='https://nexuslrf.github.io/'>Ruofan Liang</a>, <a href='https://scholar.google.com/citations?user=Jt5VvNgAAAAJ&hl=en'>Yuxuan Zhang</a>, <a href='https://www.cs.toronto.edu/~fidler/'>Sanja Fidler</a>, <a href='https://shenlong.web.illinois.edu/'>Shenlong Wang</a>, <a href='https://zgojcic.github.io/'>Zan Gojcic</a>",
     projectUrl: "https://research.nvidia.com/labs/toronto-ai/WeatherWeaver/",
     paperUrl: "https://arxiv.org/abs/2505.00704",
-    videoUrl: "https://www.youtube.com/watch?v=TSl_URiqc7M",
+    videoUrl: "https://www.youtube.com/watch?v=ZE0JZYgiaGc",
+    codeUrl: "https://github.com/chih-hao-lin/WeatherWeaver-Data",
     previewVideoUrl: "/images/2025/WeatherWeaver/teaser.mp4",
   },
   {
@@ -50,6 +73,7 @@ export const publicationData: Publication[] = [
     year: "2025",
     conference: "CVPR",
     title: "IRIS: Inverse Rendering of Indoor Scenes from Low Dynamic Range Images",
+    selected: true,
     authors: "<strong>Chih-Hao Lin</strong>, <a href='https://jbhuang0604.github.io/'>Jia-Bin Huang</a>, <a href='https://scholar.google.com/citations?hl=zh-CN&user=Nxc2RbQAAAAJ&view_op=list_works&sortby=pubdate'>Zhengqin Li</a>, <a href='http://flycooler.com/'>Zhao Dong</a>, <a href='https://richardt.name/'>Christian Richardt</a>, <a href='https://scholar.google.com/citations?user=jGQeuBUAAAAJ'>Tuotuo Li</a>, <a href='https://zollhoefer.com/'>Michael Zollhöfer</a>, <a href='https://johanneskopf.de/'>Johannes Kopf</a>, <a href='https://shenlong.web.illinois.edu/'>Shenlong Wang</a>, <a href='https://changilkim.com/'>Changil Kim</a>",
     projectUrl: "https://irisldr.github.io/",
     paperUrl: "https://arxiv.org/abs/2401.12977",
@@ -71,6 +95,7 @@ export const publicationData: Publication[] = [
     year: "2025",
     conference: "3DV",
     title: "AutoVFX: Physically Realistic Video Editing from Natural Language Instruction",
+    selected: true,
     authors: "<a href='https://haoyuhsu.github.io/'>Hao-Yu Hsu</a>, <strong>Chih-Hao Lin</strong>, <a href='https://ajzhai.github.io/'>Albert Zhai</a>, <a href='https://xiahongchi.github.io/'>Hongchi Xia</a>, <a href='https://shenlong.web.illinois.edu/'>Shenlong Wang</a>",
     projectUrl: "https://haoyuhsu.github.io/autovfx-website/",
     paperUrl: "https://arxiv.org/abs/2411.02394",
@@ -81,6 +106,7 @@ export const publicationData: Publication[] = [
     year: "2025",
     conference: "3DV",
     title: "UrbanIR: Large-Scale Urban Scene Inverse Rendering from a Single Video",
+    selected: true,
     authors: "<strong>Chih-Hao Lin</strong>, <a href='https://www.linkedin.com/in/bohanliu524/?locale=en_US'>Bohan Liu</a>, <a href='https://jamie725.github.io/website/'>Yi-Ting Chen</a>, <a href='https://www.linkedin.com/in/kuanshengchen'>Kuan-Sheng Chen</a>, <a href='http://luthuli.cs.uiuc.edu/~daf/'>David Forsyth</a>, <a href='https://jbhuang0604.github.io/'>Jia-Bin Huang</a>, <a href='https://anandbhattad.github.io/'>Anand Bhattad</a>, <a href='https://shenlong.web.illinois.edu/'>Shenlong Wang</a>",
     projectUrl: "https://urbaninverserendering.github.io/",
     paperUrl: "https://arxiv.org/abs/2306.09349",
@@ -101,6 +127,7 @@ export const publicationData: Publication[] = [
     year: "2023",
     conference: "ICCV",
     title: "ClimateNeRF: Extreme Weather Synthesis in Neural Radiance Field",
+    selected: true,
     authors: "<a href='https://y-u-a-n-l-i.github.io/'>Yuan Li*</a>, <strong>Zhi-Hao Lin*</strong>, <a href='http://luthuli.cs.uiuc.edu/~daf/'>David Forsyth</a>, <a href='https://jbhuang0604.github.io/'>Jia-Bin Huang</a>, <a href='https://shenlong.web.illinois.edu/'>Shenlong Wang</a> (* Equal Contribution)",
     projectUrl: "https://climatenerf.github.io/",
     paperUrl: "https://arxiv.org/pdf/2211.13226",

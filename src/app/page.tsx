@@ -1,6 +1,6 @@
 import { EducationEntry } from "@/components/education-entry";
 import { educationData } from "@/data/education";
-import { PublicationEntry } from "@/components/publication-entry";
+import { PublicationsSection } from "@/components/publications-section";
 import { publicationData } from "@/data/publication";
 import { ProfileSection } from "@/components/profile-section";
 import { aboutMe } from "@/data/aboutme";
@@ -78,24 +78,10 @@ export default function Home() {
                 case Section.Publication:
                   return (
                     publicationData.length > 0 && (
-                      <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
-                          Publications
-                        </h2>
-                        <p className="text-xs text-zinc-500 mb-8">
-                          Name spelling: "Zhi-Hao Lin" → "Chih-Hao Lin" (since 2025)
-                        </p>
-                        <div className="space-y-12">
-                          {publicationData.map((publication, index) => (
-                            <div key={index}>
-                              <PublicationEntry publication={publication} />
-                              {index < publicationData.length - 1 && (
-                                <div className="h-px bg-zinc-200 my-8" />
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      </section>
+                      <PublicationsSection
+                        key={sectionName}
+                        publications={publicationData}
+                      />
                     )
                   );
                 case Section.Experience:
