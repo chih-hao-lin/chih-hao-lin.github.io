@@ -40,8 +40,11 @@ export function PublicationsSection({
           })}
         </div>
       </div>
-      <p className="text-xs text-zinc-500 mb-8">
+      <p className="text-xs text-zinc-500 mb-2">
         Name spelling: &quot;Zhi-Hao Lin&quot; → &quot;Chih-Hao Lin&quot; (since 2025)
+      </p>
+      <p className="text-xs text-zinc-500 mb-8">
+        * Equal Contribution &nbsp;&nbsp; † Equal Advising
       </p>
       <div className="space-y-12">
         {displayed.map((publication, index) => (

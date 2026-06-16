@@ -20,6 +20,17 @@ export interface Publication {
 export const publicationData: Publication[] = [
   {
     year: "2026",
+    conference: "arXiv",
+    title: "BRDFusion: Physics Meets Generation for Urban Scene Inverse Rendering",
+    selected: true,
+    authors: "<a href='https://shigon255.github.io/'>Yi-Ruei Liu</a>, <a href='https://jayinnn.dev/'>Jie-Ying Lee</a>, <a href='https://brian90709.github.io/'>Zheng-Hui Huang</a>, <a href='https://yulunalexliu.github.io/'>Yu-Lun Liu</a>†, <strong>Chih-Hao Lin</strong>†",
+    projectUrl: "https://shigon255.github.io/brdfusion-page/",
+    paperUrl: "https://arxiv.org/abs/2606.17049",
+    codeUrl: "https://github.com/shigon255/BRDFusion",
+    previewVideoUrl: "/images/2026/brdfusion/teaser.mp4",
+  },
+  {
+    year: "2026",
     conference: "CVPR",
     title: "GenWildSplat: Generalizable Sparse-View 3D Reconstruction from Unconstrained Images",
     authors: "<a href='https://vinayak-vg.github.io/'>Vinayak Gupta</a>, <strong>Chih-Hao Lin</strong>, <a href='https://shenlong.web.illinois.edu/'>Shenlong Wang</a>, <a href='https://anandbhattad.github.io/'>Anand Bhattad</a>, <a href='https://jbhuang0604.github.io/'>Jia-Bin Huang</a>",
@@ -128,7 +139,7 @@ export const publicationData: Publication[] = [
     conference: "ICCV",
     title: "ClimateNeRF: Extreme Weather Synthesis in Neural Radiance Field",
     selected: true,
-    authors: "<a href='https://y-u-a-n-l-i.github.io/'>Yuan Li*</a>, <strong>Zhi-Hao Lin*</strong>, <a href='http://luthuli.cs.uiuc.edu/~daf/'>David Forsyth</a>, <a href='https://jbhuang0604.github.io/'>Jia-Bin Huang</a>, <a href='https://shenlong.web.illinois.edu/'>Shenlong Wang</a> (* Equal Contribution)",
+    authors: "<a href='https://y-u-a-n-l-i.github.io/'>Yuan Li*</a>, <strong>Zhi-Hao Lin*</strong>, <a href='http://luthuli.cs.uiuc.edu/~daf/'>David Forsyth</a>, <a href='https://jbhuang0604.github.io/'>Jia-Bin Huang</a>, <a href='https://shenlong.web.illinois.edu/'>Shenlong Wang</a>",
     projectUrl: "https://climatenerf.github.io/",
     paperUrl: "https://arxiv.org/pdf/2211.13226",
     codeUrl: "https://github.com/y-u-a-n-l-i/Climate_NeRF",
