@@ -31,6 +31,16 @@ export const publicationData: Publication[] = [
   },
   {
     year: "2026",
+    conference: "ECCV",
+    title: "SceneDiff: A Benchmark and Method for Multiview Object Change Detection",
+    authors: "<a href='http://yuqunw.github.io'>Yuqun Wu</a>, <strong>Chih-Hao Lin</strong>, <a href='https://hungdche.github.io'>Henry Che</a>, <a href='https://adititiwari19.github.io'>Aditi Tiwari</a>, <a href='https://zouchuhang.github.io'>Chuhang Zou</a>, <a href='https://shenlong.web.illinois.edu'>Shenlong Wang</a>, <a href='http://dhoiem.cs.illinois.edu'>Derek Hoiem</a>",
+    projectUrl: "https://yuqunw.github.io/SceneDiff/",
+    paperUrl: "https://arxiv.org/abs/2512.16908",
+    codeUrl: "https://github.com/yuqunw/scene_diff",
+    previewVideoUrl: "/images/2026/scenediff/teaser.mp4",
+  },
+  {
+    year: "2026",
     conference: "CVPR",
     title: "GenWildSplat: Generalizable Sparse-View 3D Reconstruction from Unconstrained Images",
     authors: "<a href='https://vinayak-vg.github.io/'>Vinayak Gupta</a>, <strong>Chih-Hao Lin</strong>, <a href='https://shenlong.web.illinois.edu/'>Shenlong Wang</a>, <a href='https://anandbhattad.github.io/'>Anand Bhattad</a>, <a href='https://jbhuang0604.github.io/'>Jia-Bin Huang</a>",
@@ -38,16 +48,6 @@ export const publicationData: Publication[] = [
     paperUrl: "https://arxiv.org/abs/2604.28193",
     codeUrl: "https://github.com/Vinayak-VG/GenWildSplat",
     previewVideoUrl: "/images/2026/genwildsplat/teaser.mp4",
-  },
-  {
-    year: "2025",
-    conference: "arXiv",
-    title: "SceneDiff: A Benchmark and Method for Multiview Object Change Detection",
-    authors: "<a href='http://yuqunw.github.io'>Yuqun Wu</a>, <strong>Chih-Hao Lin</strong>, <a href='https://hungdche.github.io'>Henry Che</a>, <a href='https://adititiwari19.github.io'>Aditi Tiwari</a>, <a href='https://zouchuhang.github.io'>Chuhang Zou</a>, <a href='https://shenlong.web.illinois.edu'>Shenlong Wang</a>, <a href='http://dhoiem.cs.illinois.edu'>Derek Hoiem</a>",
-    projectUrl: "https://yuqunw.github.io/SceneDiff/",
-    paperUrl: "https://arxiv.org/abs/2512.16908",
-    codeUrl: "https://github.com/yuqunw/scene_diff",
-    previewVideoUrl: "/images/2026/scenediff/teaser.mp4",
   },
   {
     year: "2025",
